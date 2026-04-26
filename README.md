@@ -1,7 +1,7 @@
 # pyffi-natipkg-bundle
 
 Relocatable CPython 3.12 bundles for the four
-[`soegaard/pyffi`](https://github.com/soegaard/pyffi) natipkg
+[`soegaard/pyffi`](https://github.com/pyffi-team/pyffi) natipkg
 companion packages.
 
 This repository exists for one reason: **to give the Racket
@@ -18,8 +18,7 @@ Linux VM that does not have any Python development files installed.
 Building pyffi-doc requires evaluating Scribble examples that import
 real Python modules through pyffi's FFI. Without a discoverable
 `libpython.so`, the doc-build aborts and the catalog never produces
-a successful pyffi build artefact. This has been the state for
-1254 days as of 2026-04-25.
+a successful pyffi build artefact. 
 
 The fix uses the standard Racket convention for "package needs a
 native library that pkg-build doesn't have":
@@ -64,10 +63,10 @@ Each `pyffi-*-natipkg` package gets a separate catalog entry. The
 source URLs are this repo with a `?path=` query string:
 
 ```
-https://github.com/lamestllama/pyffi-natipkg-bundle.git?path=pyffi-aarch64-linux-natipkg#main
-https://github.com/lamestllama/pyffi-natipkg-bundle.git?path=pyffi-x86_64-linux-natipkg#main
-https://github.com/lamestllama/pyffi-natipkg-bundle.git?path=pyffi-aarch64-macosx-natipkg#main
-https://github.com/lamestllama/pyffi-natipkg-bundle.git?path=pyffi-x86_64-macosx-natipkg#main
+https://github.com/pyffi-team/pyffi-natipkg-bundle.git?path=pyffi-aarch64-linux-natipkg#main
+https://github.com/pyffi-team/pyffi-natipkg-bundle.git?path=pyffi-x86_64-linux-natipkg#main
+https://github.com/pyffi-team/pyffi-natipkg-bundle.git?path=pyffi-aarch64-macosx-natipkg#main
+https://github.com/pyffi-team/pyffi-natipkg-bundle.git?path=pyffi-x86_64-macosx-natipkg#main
 ```
 
 The `pkgs.racket-lang.org` catalog admin (currently soegaard for
@@ -149,4 +148,4 @@ CPython is distributed under the
 [PSF licence](https://docs.python.org/3/license.html).
 
 This repository's metadata, layout, and README are licensed
-identically to the upstream `soegaard/pyffi` project.
+identically to the upstream `pyffi-team/pyffi` project.
